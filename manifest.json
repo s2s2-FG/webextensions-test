@@ -1,0 +1,20 @@
+{
+	"name": "Extension Test",
+	"manifest_version": 2,
+	"version": "1",
+	"description": "Shows time stayed in the page.",
+	"browser_action": {
+		"default_title": "Time on page",
+		"default_icon": "Clock_Icon-128.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs", "http://*/*", "https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches" : ["http://*/*", "https://*/*"],
+			"js": ["myScript.js"]
+		}
+	]
+}
